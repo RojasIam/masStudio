@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Studios Profesional</title>
+    <link rel="stylesheet" href="CSS/styleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styleAbout.css" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="centro">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img class="meio imagem-logo" src="imagenes/logo_max.png" alt="Logo" /></a>
+                </div>
+                <div class="container">
+                    <input type="checkbox" id="check" />
+                    <label class="bar" for="check">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </label>
+
+                    <div class="elemento-topo">
+                        <input type="checkbox" id="check" />
+                        <nav>
+                            <ul id="btn-topo">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#fundo-servicos">Servicios</a></li>
+                                <li><a href="Portfolio.html">Galeria</a></li>
+                                <li><a href="SobreNos.html">Sobre Nosotros</a></li>
+                                <li>
+                                    <a href="https://api.whatsapp.com/message/WL5TXEEFXFA4G1?autoload=1&app_absent=0"
+                                        target="_blank">Escribeme</a>
+                                </li>
+                                <li class="btn-login">
+                                    <a href="Login.html" id="btnLogin"
+                                        onclick="btnLogin_Click(); return false;">Login</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div id="meio-topo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="sobre">
+            <div class="titulo">
+                <h1>Sobre Nosotros</h1>
+            </div>
+            <div class="campoSobre">
+                <div class="textoSobre">
+                    <h2>Bienvenido a nuestro sitio</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus deserunt perspiciatis est, porro modi a repudiandae soluta odio quae fugiat et blanditiis enim consequuntur sequi doloremque. Quasi sunt nesciunt praesentium.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus deserunt perspiciatis est, porro modi a repudiandae soluta odio quae fugiat et blanditiis enim consequuntur sequi doloremque. Quasi sunt nesciunt praesentium.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus deserunt perspiciatis est, porro modi a repudiandae soluta odio quae fugiat et blanditiis enim consequuntur sequi doloremque. Quasi sunt nesciunt praesentium.
+                    </p>
+                </div>
+                <div class="imagem">
+                    <img src="img/Foto-casal1.jpg" alt="fotografo" />
+                </div>
+            </div>
+        </section>
+    </form>
+    <button onclick="voltarAoTopo()" id="btnTopo" title="Voltar ao Topo">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+            </path>
+        </svg>
+    </button>
+    <footer>
+        <div class="footer-portfolio">
+            <div class="redes-sociais">
+                <a href="#" target="_blank"><img src="img/instagram.png"
+                        alt="Instagram" /></a>
+                <a href="#" target="_blank"><img
+                        src="img/facebook.png" alt="Facebook" /></a>
+                <a href="#" target="_blank"><img
+                        src="img/whatsapp.png" alt="Whatsapp" /></a>
+            </div>
+            <div id="elemento-topo">
+                <nav>
+                    <div id="btn-topo">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#fundo-servicos">Servicios</a></li>
+                        <li><a href="Portfolio.html">Galeria</a></li>
+                        <li><a href="SobreNos.html">Sobre Nosotros</a></li>
+                        <li>
+                            <a href="#"
+                                target="_blank">Escribeme</a>
+                        </li>
+                    </div>
+                </nav>
+                <div id="meio-topo"></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Developer and Design by Andres Rojas 2024</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function voltarAoTopo() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+
+        function toggleButtonDisplay() {
+            const btnTopo = document.getElementById("btnTopo");
+            const scrollTop =
+                document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (scrollTop > 20) {
+                btnTopo.style.display = "block";
+                btnTopo.style.opacity = "1";
+            } else {
+                btnTopo.style.opacity = "0";
+                setTimeout(() => {
+                    if (btnTopo.style.opacity === "0") {
+                        btnTopo.style.display = "none";
+                    }
+                }, 300);
+            }
+        }
+
+        window.addEventListener("scroll", toggleButtonDisplay);
+    </script>
+</body>
+
+</html>
